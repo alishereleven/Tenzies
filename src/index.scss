@@ -1,0 +1,14 @@
+@import "config";
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: $darkBackground;
+}
+
+main {
+  @import "game";
+  @import "score-board";
+}
+
+@import "screen"

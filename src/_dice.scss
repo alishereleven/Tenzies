@@ -1,0 +1,127 @@
+.dice-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+
+  .die-face {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.8rem;
+    box-shadow: 0px 2px 2px 0px $dieShadow;
+    background: white;
+    cursor: pointer;
+  }
+
+  .dot {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background-color: $main;
+  }
+
+  .die-1 {
+    @include flex-center;
+
+    .dot-1 {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  .die-2 {
+    @include grid-center;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    .dot-1 {
+      grid-row: 1;
+      grid-column: 1; 
+    }
+
+    .dot-2 {
+      grid-row: 2;
+      grid-column: 2; 
+    }
+  }
+
+  .die-3 {
+    @include grid-center;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .dot-1 {
+      justify-self: start;
+      align-self: end;
+      grid-row: 1;
+      grid-column: 3;
+    }
+
+    .dot-2 {
+      grid-row: 2;
+      grid-column: 2; 
+    }
+
+    .dot-3 {
+      justify-self: end;
+      align-self: start;
+      grid-row: 3;
+      grid-column: 1; 
+    }
+  }
+
+  .die-4 {
+    @include grid-center;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .die-5 {
+    @include grid-center;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .dot-1 {
+      justify-self: end;
+      align-self: end;
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    .dot-2 {
+      justify-self: start;
+      align-self: end;
+      grid-row: 1;
+      grid-column: 3; 
+    }
+
+    .dot-3 {
+      grid-row: 2;
+      grid-column: 2; 
+    }
+
+    .dot-4 {
+      justify-self: end;
+      align-self: start;
+      grid-row: 3;
+      grid-column: 1;
+    }
+
+    .dot-5 {
+      justify-self: start;
+      align-self: start;
+      grid-row: 3;
+      grid-column: 3; 
+    }
+  }
+
+  .die-6 {
+    @include grid-center;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .die-hold {
+    background: $green;
+  }
+}

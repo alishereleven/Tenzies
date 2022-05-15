@@ -1,0 +1,40 @@
+.game {
+  @include flex-center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 400px;
+  height: 400px;
+  padding: 40px 25px;
+  border-radius: $border-radius;
+  background: $lightBackground;
+
+  .intro {
+    text-align: center;
+  
+    .title {
+      font-size: 2.5rem;
+      color: $main;
+    }
+    
+    .rules {
+      width: 250px;
+      font-size: 1.2rem;
+      font-family: Inter, sans-serif;
+      font-weight: 400;
+      color: $rules;
+    }
+  }
+
+  @import "dice";
+  
+  .button {
+    width: 180px;
+    height: 40px;
+    border: 0;
+    border-radius: 0.8rem;
+    background: $blue;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,33 @@
+$darkBackground: #0B2434;
+$lightBackground: #F5F5F5;
+$main: #2B283A;
+$rules: #4A4E74;
+$dieShadow: #00000026;
+$green: #59E391;
+$blue: #5035FF;
+
+$border-radius: 20px;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+  font-family: Karla, sans-serif;
+  font-weight: 700;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid-center {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
